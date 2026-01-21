@@ -1,1 +1,0 @@
-/home/sriramk/unitree_ws/build/unitree_legged_real/ament_cmake_environment_hooks/local_setup.sh

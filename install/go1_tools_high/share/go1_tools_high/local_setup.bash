@@ -1,1 +1,0 @@
-/home/sriramk/unitree_ws/build/go1_tools_high/ament_cmake_environment_hooks/local_setup.bash

@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/sriramk/unitree_ws/build/go1_tools_high/ros2_highcmd_profile" "/home/sriramk/unitree_ws/build/go1_tools_high/ros2_highcmd_loop" "TARGETS" "ros2_highcmd_profile" "ros2_highcmd_loop" "DESTINATION" "lib/go1_tools_high")

@@ -1,1 +1,0 @@
-/home/sriramk/unitree_ws/src/unitree_ros2/ros2_unitree_legged_msgs/msg/IMU.msg

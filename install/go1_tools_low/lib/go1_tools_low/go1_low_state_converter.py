@@ -1,1 +1,0 @@
-/home/sriramk/unitree_ws/src/go1_tools_low/scripts/go1_low_state_converter.py

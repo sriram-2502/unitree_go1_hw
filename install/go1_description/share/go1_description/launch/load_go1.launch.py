@@ -1,1 +1,0 @@
-/home/sriramk/unitree_ws/src/unitree_ros2/go1_description/launch/load_go1.launch.py
