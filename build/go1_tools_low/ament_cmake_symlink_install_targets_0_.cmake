@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/sriramk/unitree_ws/build/go1_tools_low/ros2_torque_example" "/home/sriramk/unitree_ws/build/go1_tools_low/ros2_standup_controller" "TARGETS" "ros2_torque_example" "ros2_standup_controller" "DESTINATION" "lib/go1_tools_low")

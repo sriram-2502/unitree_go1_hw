@@ -1,0 +1,50 @@
+ekf_filter_node:
+  ros__parameters:
+    frequency: 200.0
+    sensor_timeout: 0.05
+    two_d_mode: false
+
+    publish_tf: true
+    print_diagnostics: true
+
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: odom
+
+    # --------------------------
+    # IMU
+    # --------------------------
+    imu0: /imu
+    imu0_queue_size: 50
+    imu0_nodelay: true
+    imu0_differential: false
+    imu0_relative: false
+
+    # [x y z  r p y  vx vy vz  wx wy wz  ax ay az]
+    imu0_config: [false, false, false,
+                  true,  true,  true,
+                  false, false, false,
+                  true,  true,  true,
+                  false, false, false]
+    imu0_remove_gravitational_acceleration: true
+
+    # --------------------------
+    # TWIST (from leg odom)
+    # IMPORTANT: Choose frame convention and be consistent.
+    # We'll publish twist in base_link frame (body-frame velocities).
+    # --------------------------
+    twist0: /twist
+    twist0_queue_size: 50
+    twist0_nodelay: true
+    twist0_differential: false
+    twist0_relative: false
+
+    # Use body linear velocity (vx, vy, vz) and optionally yaw rate (wz)
+    twist0_config: [false, false, false,
+                    false, false, false,
+                    true,  true,  true,
+                    false, false, true,
+                    false, false, false]
+
+    reset_on_time_jump: true

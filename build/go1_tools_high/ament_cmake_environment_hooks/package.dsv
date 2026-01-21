@@ -1,0 +1,4 @@
+source;share/go1_tools_high/local_setup.bash
+source;share/go1_tools_high/local_setup.dsv
+source;share/go1_tools_high/local_setup.sh
+source;share/go1_tools_high/local_setup.zsh

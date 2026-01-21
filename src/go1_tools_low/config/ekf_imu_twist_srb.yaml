@@ -1,0 +1,60 @@
+ekf_filter_node:
+  ros__parameters:
+    frequency: 200.0
+    sensor_timeout: 0.1
+    two_d_mode: false
+
+    publish_tf: true
+    print_diagnostics: true
+
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: odom
+
+    # Good to keep for sim/time-jumps
+    reset_on_time_jump: true
+
+    # ==========================
+    # IMU (orientation + gyro only)
+    # ==========================
+    imu0: /imu
+    imu0_queue_size: 50
+    imu0_nodelay: true
+    imu0_differential: false
+    imu0_relative: false
+
+    # [x y z  r p y  vx vy vz  wx wy wz  ax ay az]
+    # Use orientation + angular velocity from IMU
+    imu0_config: [false, false, false,
+                  true,  true,  true,
+                  false, false, false,
+                  true,  true,  true,
+                  false, false, false]
+
+    imu0_remove_gravitational_acceleration: true
+
+    # ==========================
+    # TWIST (SRB world velocity)
+    # ==========================
+    twist0: /twist_srb
+    twist0_queue_size: 50
+    twist0_nodelay: true
+    twist0_differential: false
+    twist0_relative: false
+
+    # twist msg provides: vx vy vz and optionally wz (if you want)
+    # We'll fuse vx vy vz only (safe).
+    # Indices: [x y z r p y vx vy vz wx wy wz ax ay az]
+    twist0_config: [false, false, false,
+                    false, false, false,
+                    true,  true,  true,
+                    false, false, false,
+                    false, false, false]
+
+    # Optional: if you want yaw-rate from twist (only if your SRB publishes good wz)
+    # twist0_config: [false, false, false,
+    #                 false, false, false,
+    #                 true,  true,  true,
+    #                 false, false, true,
+    #                 false, false, false]

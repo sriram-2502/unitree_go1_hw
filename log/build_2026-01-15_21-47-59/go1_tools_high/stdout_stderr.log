@@ -1,0 +1,63 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found ros2_unitree_legged_msgs: 0.4.0 (/home/sriramk/unitree_ws/install/ros2_unitree_legged_msgs/share/ros2_unitree_legged_msgs/cmake)
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/sriramk/unitree_ws/build/go1_tools_high
+[ 25%] [32mBuilding CXX object CMakeFiles/ros2_highcmd_profile.dir/src/ros2_highcmd_profile.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/ros2_highcmd_loop.dir/src/ros2_highcmd_loop.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable ros2_highcmd_profile[0m
+[ 75%] Built target ros2_highcmd_profile
+[100%] [32m[1mLinking CXX executable ros2_highcmd_loop[0m
+[100%] Built target ros2_highcmd_loop
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/lib/libunitree_legged_sdk_amd64.so
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/lib/libunitree_legged_sdk_arm64.so
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/lib/go1_tools_high/go1_high_state_converter.py
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/lib/go1_tools_high/ros2_highcmd_profile
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/lib/go1_tools_high/ros2_highcmd_loop
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/launch/ekf_highcmd_loop_record.launch.py
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/config/ekf_high_twist.yaml
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/config/go1_ekf_layout.xml
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/ament_index/resource_index/package_run_dependencies/go1_tools_high
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/ament_index/resource_index/parent_prefix_path/go1_tools_high
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/environment/ament_prefix_path.sh
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/environment/ament_prefix_path.dsv
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/environment/path.sh
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/environment/path.dsv
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/local_setup.bash
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/local_setup.sh
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/local_setup.zsh
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/local_setup.dsv
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/package.dsv
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/ament_index/resource_index/packages/go1_tools_high
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/cmake/go1_tools_highConfig.cmake
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/cmake/go1_tools_highConfig-version.cmake
+-- Symlinking: /home/sriramk/unitree_ws/install/go1_tools_high/share/go1_tools_high/package.xml

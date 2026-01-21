@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-5449acc6008f4b4ccd4b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "go1_tools_high",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "go1_tools_high_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-go1_tools_high_uninstall-635404d71b7e789cf7a6.json",
+					"name" : "go1_tools_high_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ros2_highcmd_loop::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ros2_highcmd_loop-1039d5e11b91d51e3f6b.json",
+					"name" : "ros2_highcmd_loop",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ros2_highcmd_profile::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ros2_highcmd_profile-3fd95a1c3ab6d9d99f2d.json",
+					"name" : "ros2_highcmd_profile",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-1a8f9fbbd6f85f99e120.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/sriramk/unitree_ws/build/go1_tools_high",
+		"source" : "/home/sriramk/unitree_ws/src/go1_tools_high"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
