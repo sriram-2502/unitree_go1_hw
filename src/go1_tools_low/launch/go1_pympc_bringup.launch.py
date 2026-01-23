@@ -61,6 +61,7 @@ def generate_launch_description():
                 "joint_states_topic": "/state/joint_states",
                 "contacts_topic": "/contacts",
                 "zero_imu_on_startup": False,
+                "publish_rate_hz": 500.0,
                 "use_joint_bias": True,
                 "joint_bias": [
                     0.01615, 0.0, 0.0,

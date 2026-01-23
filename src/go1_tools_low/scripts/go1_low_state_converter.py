@@ -82,6 +82,14 @@ class Go1StateConverter(Node):
         # Freshness timeout (seconds). If a message is older than this, ignore it.
         self.state_timeout = float(self.declare_parameter("state_timeout", 0.20).value)
 
+        # Optional publish throttle (Hz). Set <= 0 to disable.
+        self.publish_rate_hz = float(self.declare_parameter("publish_rate_hz", 0.0).value)
+        self._publish_period_ns = 0
+        self._latest_low_state: Optional[LowState] = None
+        if self.publish_rate_hz > 0.0:
+            self._publish_period_ns = int(1e9 / self.publish_rate_hz)
+            self._timer = self.create_timer(1.0 / self.publish_rate_hz, self._timer_cb)
+
         # ---------------------------
         # Frames
         # ---------------------------
@@ -203,6 +211,17 @@ class Go1StateConverter(Node):
     # Main conversion callback
     # ---------------------------
     def cb_low_state(self, msg: LowState) -> None:
+        if self._publish_period_ns > 0:
+            self._latest_low_state = msg
+            return
+        self._process_low_state(msg)
+
+    def _timer_cb(self) -> None:
+        if self._latest_low_state is None:
+            return
+        self._process_low_state(self._latest_low_state)
+
+    def _process_low_state(self, msg: LowState) -> None:
         self.seq += 1
         stamp = self.get_clock().now().to_msg()
         t = self._now_sec()
