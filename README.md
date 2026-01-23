@@ -3,6 +3,9 @@
 This workspace contains the high-level and low-level tools for Unitree Go1,
 plus the ROS 2 integration required to run controllers from a PC.
 
+Safety note:
+- Add styrofoam protection around the robot to avoid damage in falls; impacts can damage the LAN port and the internal connection to the Raspberry Pi.
+
 ## Workspace Install
 ```bash
 source /opt/ros/humble/setup.bash

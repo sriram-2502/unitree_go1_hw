@@ -41,12 +41,17 @@ add_executable(ros2_torque_example src/ros2_torque_example.cpp)
 target_link_libraries(ros2_torque_example ${EXTRA_LIBS})
 ament_target_dependencies(ros2_torque_example rclcpp ros2_unitree_legged_msgs)
 
+add_executable(ros2_position_example src/ros2_position_example.cpp)
+target_link_libraries(ros2_position_example ${EXTRA_LIBS})
+ament_target_dependencies(ros2_position_example rclcpp ros2_unitree_legged_msgs)
+
 add_executable(ros2_standup_controller src/ros2_standup_controller.cpp)
 target_link_libraries(ros2_standup_controller ${EXTRA_LIBS})
 ament_target_dependencies(ros2_standup_controller rclcpp ros2_unitree_legged_msgs geometry_msgs)
 
 install(TARGETS
   ros2_torque_example
+  ros2_position_example
   ros2_standup_controller
   DESTINATION lib/${PROJECT_NAME}
 )

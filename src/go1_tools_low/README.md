@@ -4,9 +4,12 @@ ROS 2 tools for **Unitree Go1 low-level mode**. This package provides the low-st
 conversion pipeline, basic torque tests, and a PD bridge for sending commands to
 the hardware.
 
+⚠️ Safety note:
+- Add styrofoam protection around the robot to avoid damage in falls; impacts can damage the LAN port and the internal connection to the Raspberry Pi.
+
 ## Core Utilities (Low Mode)
 This package focuses on basic low-level utilities first:
-- Torque test node for joint mapping validation.
+- Torque and Joint position test nodes for joint mapping validation.
 - Standup controller script.
 - PD bridge for sending torque commands to the hardware.
 - PyMPC bringup launch to set the robot in low mode and publish basic state estimates.
@@ -17,18 +20,23 @@ How to run:
 ros2 run go1_tools_low ros2_torque_example
 ```
 
-2) Standup controller:
+2) Position example (use while the robot is hanging):
+```
+ros2 run go1_tools_low ros2_position_example
+```
+
+3) Standup controller:
 ```
 ros2 run go1_tools_low ros2_standup_controller
 ```
 ⚠️ Standup controller is still under development.
 
-3) PD bridge (torque output):
+4) PD bridge (torque output):
 ```
 ros2 run go1_tools_low pympc_pd_bridge.py --ros-args -p enabled:=true -p use_ff_torque:=true -p kp:=0.0 -p kd:=3.0 -p tau_limit:=20.0
 ```
 
-4) PyMPC bringup (state conversion + estimators):
+5) PyMPC bringup (state conversion + estimators):
 ```
 ros2 launch go1_tools_low go1_pympc_bringup.launch.py
 ```
