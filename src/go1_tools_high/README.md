@@ -42,6 +42,7 @@ ros2 launch go1_tools_high ekf_highcmd_loop_record.launch.py \
 ## Notes
 - High-level mode expects the robot to be in **sport/high mode** (standing).
 - The loop nodes default to **200 Hz**.
+- PlotJuggler is launched automatically by `ekf_highcmd_loop_record.launch.py` with its config.
 
 ## TODO 📝
 - Add a high-level motion planner using **density functions**.

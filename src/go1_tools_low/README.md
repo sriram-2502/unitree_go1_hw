@@ -60,6 +60,8 @@ Then add a ROS2 data stream and plot these topics as needed:
 - `/quadruped_pympc_torques` (MPC torques)
 - `/low_cmd` (commands sent to the robot)
 
+- For quick PyMPC testing, load the debug layout file: `unitree_ws/src/go1_tools_low/config/go1_debug_low.xml`.
+
 Debug notes:
 - If a low-level motor state reports `4`, the motor is unresponsive; restart the robot.
 - In low mode, the IMU may not publish until you send a small torque command first.
