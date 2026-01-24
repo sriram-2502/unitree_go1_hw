@@ -126,9 +126,39 @@ Local PyMPC tweaks we use:
 - `Quadruped-PyMPC/quadruped_pympc/config.py`:
   - Go1 mass/inertia updated from the URDF (see the Pinocchio script above).
 
-Experiments (not recommended):
-- We modified loop settings in our local copy of `run_controller.py` (not in the upstream repo).
-  - Tested `MPC_FREQ=100`, `WBC_LOOP_HZ=500` with defaults; unstable on hardware.
+Experiments (not perfect yet):
+- We added a joint bias in the low-state converter to help the robot stand without tilt.
+
+  Standup tilt -- cmd goUp (with no joint bias):
+  ![Standup tilt (before)](../../docs/images/robot_standup_tilt.jpg)
+  ![Standup tilt (before)](../../docs/images/robot_goUp_tilt.gif)
+
+
+  Standup tilt fix -- cmd goUp (after adding  joint bias):
+  ![Standup tilt (after)](../../docs/images/robot_standup_tilt_fix.jpg)
+  ![Standup tilt (after)](../../docs/images/robot_goUp_tilt_fix.gif)
+
+- We tested the nominal centroidal nmpc for walking on flat ground. 
+
+  Trot in place -- cmd goUp -> stw:
+  ![STW pitch issue](../../docs/images/robot_stw.gif)
+  Note : Robot tilt in goUp fixes itself and robot starts trotting.
+
+  TODO 📝: fix forward pitch when running `stw` with PyMPC.
+
+  Forward and bakward velsocties with keyboard commands -- cmd goUp -> stw _> ictp -> w/s:
+  ![STW pitch issue](../../docs/images/robot_ictp.gif)
+
+  ![STW pitch issue](../../docs/images/robot_ictp2.gif)
+  TODO 📝: improve tracking, make more stable gaits.
+
+  ⚠️ We also tried running the PyMPC ROS2 controller in sim and forwarding the resulting torques to real hardware while the robot was hanging (via `pympc_pd_bridge.py`). The behavior was unstable; not recommended.
+  ![STW pitch issue](../../docs/images/robot_blind.gif)
+
+- The framework ok but still needs to be optimized with correct gait params for Go1 and integrated with a standed state estimator and WBC from legged control repo.
+- ⚠️ We modified loop settings in our local copy of `run_controller.py` (not in the upstream repo).
+- Tested `MPC_FREQ=100`, `WBC_LOOP_HZ=500` with defaults; unstable on hardware.
+
 
 ## MPC/WBC References
 - [legged_control](https://github.com/qiayuanl/legged_control) — tested, works well; ROS + OCS2 dependencies make it heavier.
