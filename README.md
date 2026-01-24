@@ -71,4 +71,6 @@ ros2 run go1_tools_low pympc_pd_bridge.py --ros-args -p enabled:=true -p use_ff_
 ## Stop the Robot
 - Press `Ctrl+C` in the PD bridge terminal to stop publishing torques.
 
+![STW pitch issue](docs/images/robot_ictp2.gif)
+
 ---
