@@ -32,9 +32,8 @@ ping 192.168.123.161
 ## Robot Setup
 Use the wireless controller:
 1) Power on
-2) **L2 + A** to stand
-3) Release sticks
-4) (Recommended) turn the controller off
+2) Wait for robot to stand up
+3) Connect ethernet and launch high mode (should be good to go)
 
 This puts the robot in **sport/high-level mode**.
 
@@ -49,6 +48,17 @@ ros2 run go1_tools_high ros2_highcmd_profile
 
 ## Low-Level Mode
 See: `src/go1_tools_low/README.md`
+
+## Robot Setup
+Use the wireless controller:
+1) Power on
+2) **L2 + A** to damp
+3) **L2 + A** to go down
+4) **L2 + B** to damp
+5) **L1 + L2 + start** to go to low mode
+5) (Recommended) turn the controller off
+
+This puts the robot in **sport/high-level mode**.
 
 Quick start:
 ```bash
